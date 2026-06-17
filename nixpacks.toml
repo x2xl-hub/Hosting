@@ -1,0 +1,9 @@
+# Install both Python and Node so users can run .py and .js files
+[phases.setup]
+nixPkgs = ["python311", "nodejs_20", "gcc"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "gunicorn -w 1 --threads 8 -b 0.0.0.0:$PORT app:app"
