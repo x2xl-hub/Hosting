@@ -1,6 +1,6 @@
 # Install both Python and Node so users can run .py and .js files
 [phases.setup]
-nixPkgs = ["python311", "nodejs_20", "gcc"]
+nixPkgs = ["python311Full", "nodejs_20", "gcc"]
 
 [phases.install]
 cmds = ["pip install -r requirements.txt"]
